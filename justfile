@@ -1,5 +1,5 @@
 set shell := ["bash", "-ceu", "-o", "pipefail"]
 
 test:
-    echo $SHELL
-    $SHELL --version
+  echo $SHELL
+  $SHELL --version
