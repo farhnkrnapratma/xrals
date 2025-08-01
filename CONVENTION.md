@@ -1,14 +1,19 @@
 # CODE STYLE GUIDE
 
+This document defines the code style conventions for Nushell scripts in this project.
+
+The goal is to ensure consistency, readability, and maintainability across codebase,
+regardless of who writes it.
+
 ## Indentation
 
-* Use 2 spaces for indentation. Do not use tabs.
+* Use 4 spaces for indentation. **DO NOT** use tabs.
 
-## Naming (Variables & Functions)
+## Variables & Functions Naming
 
-* Use snake_case for all names (variables, functions, parameters).
+* Use `snake_case` for all names (variables, functions, parameters).
 * Names should be descriptive. Avoid one-letter names unless in very small scope (e.g. loops).
-* Example: `input_file`, `get_user_data`
+* Example: `package_name`, `package_version`
 
 ## Line Length
 
@@ -24,24 +29,24 @@
 * Example:
 
 ```nushell
-  # Extracts all filenames from the current directory
+# Extracts all filenames from the current directory
 
-  ls | get name
+ls | get name
 ```
 
 ## Functions
 
-* Define functions using `def` or `def-env`.
+* Place 1 space before and after the square brackets ([ ]) in function parameter declarations.
 * Use meaningful parameter names.
 * Always place a comment above the function describing what it does.
 * Example:
 
 ```nushell
-  # Returns the number of lines in a file
+# Returns the number of lines in a file
 
-  def count\_lines \[file: string] {
-  open \$file | lines | length
-  }
+def count_lines [file: string] {
+    open $file | lines | length
+}
 ```
 
 ## Blank Lines
@@ -51,25 +56,15 @@
 ## File Naming
 
 * Script filenames must use **dash-separated-lowercase** (not underscore).
-* Example: `process-data.nu`, `init-env.nu`
+* Example: `xrals-cache.nu`, `xrals-init.nu`
 * Exception: Variables and function names still use `snake_case`.
-
-## Module Structure
-
-* Group related functions into one file.
-* Use `use` or `source` to import functions.
-* Always place `source` or `use` at the top of the file.
-* Example:
-
-```nushell
-    use utils.nu count_lines
-```
 
 ## Constants
 
-* Simulate constants using `let` at the top of the file.
+* Constant names must use `ALL_CAPS` and `snake_case`.
 * Example:
 
 ```nushell
-  let api_url = "[https://example.com](https://example.com)"
+const CHECK_HASH = true
+const MAX_SIZE = 10
 ```
