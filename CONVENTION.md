@@ -1,4 +1,4 @@
-# CODE STYLE GUIDE
+# XRALS Code Conventions
 
 This document defines the code style conventions for Nushell scripts in this project.
 
