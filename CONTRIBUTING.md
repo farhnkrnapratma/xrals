@@ -1,8 +1,10 @@
-# Contributing to xrals
+# Contributing to XRALS
 
-Thank you for your interest in contributing to **xrals**!
+Thank you for your interest in contributing to **XRALS**!
 
-This project is powered by **Nushell** and emphasizes clean, consistent scripting practices. Please read and follow the guidelines below to ensure a smooth and productive collaboration.
+This project is powered by **Nushell** and emphasizes clean, consistent scripting practices.
+
+Please read and follow the guidelines below to ensure a smooth and productive collaboration.
 
 ---
 
@@ -52,4 +54,4 @@ To propose a new rule or change existing conventions:
 
 Open an issue with your question or draft. We welcome all contributions—big or small.
 
-Thanks for helping improve **xrals**!
+Thanks for helping improve **XRALS**!
