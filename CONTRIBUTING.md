@@ -14,44 +14,27 @@ All code contributions must follow the conventions defined in [`CONVENTION.md`](
 
 ---
 
-## Directory Layout
-
-* All Nushell scripts should be placed in the `src/` directory.
-
----
-
 ## Submitting Contributions
 
 1. **Fork** the repository and clone your copy.
 2. Create a **descriptive branch name** (e.g. `fix-parse-error`, `add-logging`).
 3. Make your changes following the style guide.
 4. Ensure all new functions are documented with comments.
-5. Submit a **pull request** (PR) with a clear title and description.
+5. **Sign your commits** using the `-s` flag (see below).
+6. Submit a **pull request** (PR) with a clear title and description.
 
 ---
 
-## Code Review Criteria
+## Developer Certificate of Origin (DCO)
 
-Your PR will be reviewed based on:
+All commits must be signed to indicate your agreement with the [Developer Certificate of Origin](./DCO).
 
-* Adherence to the code style guide.
-* Clarity and simplicity of logic.
-* Consistent structure and naming.
-* Correct use of `const`, `let`, and parameter style.
+You certify that you wrote the code or have the right to contribute it under the project’s license (GPL-3.0-or-later).
 
----
+### How to sign your commits
 
-## Suggesting Changes to the Style Guide
+Use the `-s` option when committing:
 
-To propose a new rule or change existing conventions:
-
-* Open a new issue and explain your reasoning with examples.
-* If approved, the maintainers will update `CONVENTION.md`.
-
----
-
-## Need Help?
-
-Open an issue with your question or draft. We welcome all contributions—big or small.
-
-Thanks for helping improve **XRALS**!
+```bash
+git commit -s -m "Fix: parsing error in state manager"
+```
