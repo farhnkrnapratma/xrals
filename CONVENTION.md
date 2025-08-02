@@ -36,7 +36,7 @@ ls | get name
 
 ## Functions
 
-* Place 1 space before and after the square brackets ([ ]) in function parameter declarations.
+* Place 1 space before and after the square brackets (\[ ]) in function parameter declarations.
 * Use meaningful parameter names.
 * Always place a comment above the function describing what it does.
 * Example:
@@ -68,3 +68,46 @@ def count_lines [file: string] {
 const CHECK_HASH = true
 const MAX_SIZE = 10
 ```
+
+## Commit Message Format
+
+All commit messages must follow the `type: short description` format.
+
+This ensures consistent and readable commit history, and makes it easier to generate changelogs or review logs.
+
+### Structure
+
+```
+<type>: <short summary>
+
+<optional longer description if needed>
+
+Signed-off-by: Your Name <your@email.com>
+```
+
+* Use the `-s` flag with `git commit` to automatically generate the `Signed-off-by` line.
+* First line must not exceed 72 characters.
+* Write messages in **imperative form** (e.g., “Add”, not “Added”).
+
+### Allowed Types
+
+| Type        | Description                                     |
+| ----------- | ----------------------------------------------- |
+| `Add:`      | New feature or functionality                    |
+| `Fix:`      | Bug fixes                                       |
+| `Refactor:` | Code restructuring without behavior change      |
+| `Remove:`   | Removing code, files, or features               |
+| `Update:`   | Minor changes, such as text or formatting       |
+| `Docs:`     | Documentation changes                           |
+| `Test:`     | Adding or modifying tests                       |
+| `Chore:`    | Maintenance tasks (e.g., dependencies, configs) |
+
+### Example
+
+```
+Fix: prevent infinite loop in cache parser
+
+Added a guard condition to break the loop when no new tokens
+are found in input. Also improved error message clarity.
+
+Signed-off-by: Farhan Kurnia Pratama <farhnkrnapratma@gmail.com>```
